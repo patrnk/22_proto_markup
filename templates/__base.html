@@ -3,16 +3,88 @@
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %} - kypimsami.ru</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/__base.css" rel="stylesheet">
     {% block stylesheets %}
     {% endblock %}
   </head>
   <body>
-    {% include '_topbar.html' %}
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <p class="navbar-text">
+            Регион:
+          </p>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" id="location-popover" href="#">
+              Новосибирск и область
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Москва</a></li>
+              <li><a href="#">#TODO: multicolumn dropdown</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Леонид Федорович</a></li>
+          <li><a href="#">выход</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="location-popover-template-wrapper", style="visibility: hidden">
+      <div class="popover fade bottom in location-popover-template" role="tooltip">
+        <div class="arrow"></div>
+        <h3 class="popover-title" style="display: none;"></h3>
+        <div class="popover-content">
+          <div class="row" id="location-prompt">
+            <p class="text-center">Ваш регион - Новосибирск и область.<br>Угадали?</p>
+            <button class="btn btn-default col-md-offset-2 col-md-3">Да</button>
+            <button class="btn btn-default col-md-offset-2 col-md-3">Нет</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="location-prompt-wrapper" style="visibility: hidden;">
+      <div class="row" id="location-prompt">
+        <p class="text-center">Ваш регион - Новосибирск и область.<br>Угадали?</p>
+        <button class="btn btn-default col-md-offset-3 col-md-2">Да</button>
+        <button class="btn btn-default col-md-offset-2 col-md-2 location-dropdown-trigger">Нет</button>
+      </div>
+    </div>
     {% block content %}
     {% endblock %}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     {% block javascript %}
     {% endblock %}
+    <script>
+        var showLocationPopover = function() {
+            var popoverTemplate = $("#location-popover-template-wrapper").html();
+            $("#location-popover").popover({
+                html: true,
+                placement: "bottom",
+                trigger: "manual",
+                container: "body",
+                template: popoverTemplate,
+                content: function() {
+                    return $("#location-prompt-wrapper").html();
+                }
+            }).popover("show");
+        };
+        $(document).ready(function() {
+            if (localStorage.getItem("isLocationPrompted") != "true") {
+                showLocationPopover();
+                localStorage.setItem("isLocationPrompted", "true");
+            }
+            $(".location-dropdown-trigger").click(function(e) {
+                e.stopPropagation(); // https://stackoverflow.com/a/35760042/3694363
+                $("#location-popover").dropdown("toggle");
+                $("#location-popover").popover("hide");
+            });
+        });
+        $(document).on("click", function (e) {
+            $("#location-popover").popover("hide");
+        });
+    </script>
   </body>
 </html>
