@@ -13,8 +13,8 @@
 
 {% block content %}
 <div class="container">
-  <div class="row">
-    <section class="participants">
+  <section class="participants">
+    <div class="row">
       <div class="col-sm-3 col-md-3">
         <p class="participants-label">Участники в Новосибирске:</p>
       </div>
@@ -24,10 +24,12 @@
       <div class="col-sm-3 col-md-4">
         <a href="#" class="participants-counter">25 производителей</a>
       </div>
-    </section>
-    <section class="order-form">
+    </div>
+  </section>
+  <section class="order-form">
+    <div class="row">
       {% include '_order-form.html' %}
-    </section>
-  </div>
+    </div>
+  </section>
 </div>
 {% endblock %}
