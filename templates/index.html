@@ -31,5 +31,20 @@
       {% include '_order-form.html' %}
     </div>
   </section>
+  <section class="new-orders">
+    <div class="row">
+      <div class="col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2 text-center">
+        <h1 class="new-orders-caption">Свежие заявки</h1>
+      </div>
+    </div>
+    {% include '_order-filters.html' %}
+    {% include '_order.html' %}
+    {% include '_order.html' %}
+    {% include '_order.html' %}
+    {% include '_order.html' %}
+    <div class="row text-center">
+      <button class="btn btn-primary btn-lg all-orders-button">Посмотреть все заявки</button>
+    </div>
+  </section>
 </div>
 {% endblock %}

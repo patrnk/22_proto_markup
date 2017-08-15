@@ -6,11 +6,27 @@
     padding-top: 60px;
 }
 
+.new-orders {
+    padding-top: 50px;
+}
+
 .participants-label {
     font-size: 16px;
     line-height: 42.8571429px;
 }
+
 .participants-counter {
     font-size: 30px;
     line-height: 42.8571429px;
 }
+
+.new-orders-caption {
+    padding-bottom: 25px;
+    font-size: 48px;
+}
+
+.all-orders-button {
+    display: inline-block;
+    border-radius: 25px;
+    width: 300px;
+ }
