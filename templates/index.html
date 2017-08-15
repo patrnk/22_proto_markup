@@ -2,5 +2,29 @@
 
 
 {% block title %}
-  Главная
+Главная
+{% endblock %}
+
+
+{% block stylesheets %}
+  <link href="assets/css/index.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <section class="participants">
+      <div class="col-sm-3 col-md-3">
+        <p class="participants-label">Участники в Новосибирске:</p>
+      </div>
+      <div class="col-sm-3 col-md-4">
+        <a href="#" class="participants-counter">105 оптовых компаний</a>
+      </div>
+      <div class="col-sm-3 col-md-4">
+        <a href="#" class="participants-counter">25 производителей</a>
+      </div>
+    </section>
+  </div>
+</div>
 {% endblock %}
