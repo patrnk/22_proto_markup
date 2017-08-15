@@ -7,13 +7,13 @@
 
 
 {% block stylesheets %}
-  <link href="assets/css/index.css" rel="stylesheet">
+<link href="assets/css/index.css" rel="stylesheet">
 {% endblock %}
 
 
 {% block content %}
-<div class="container">
-  <section class="participants">
+<section class="participants">
+  <div class="container">
     <div class="row">
       <div class="col-sm-3 col-md-3">
         <p class="participants-label">Участники в Новосибирске:</p>
@@ -25,13 +25,17 @@
         <a href="#" class="participants-counter">25 производителей</a>
       </div>
     </div>
-  </section>
-  <section class="order-form">
+  </div>
+</section>
+<section class="order-form">
+  <div class="container">
     <div class="row">
       {% include '_order-form.html' %}
     </div>
-  </section>
-  <section class="new-orders">
+  </div>
+</section>
+<section class="new-orders">
+  <div class="container">
     <div class="row">
       <div class="col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2 text-center">
         <h1 class="new-orders-caption">Свежие заявки</h1>
@@ -45,8 +49,10 @@
     <div class="row text-center">
       <button class="btn btn-primary btn-lg all-orders-button">Посмотреть все заявки</button>
     </div>
-  </section>
-  <section class="reviews">
+  </div>
+</section>
+<section class="reviews">
+  <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div id="review-carousel" class="carousel slide" data-ride="carousel">
@@ -73,6 +79,6 @@
         <button class="btn btn-info leave-review-button">Отправить отзыв</button>
       </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 {% endblock %}
