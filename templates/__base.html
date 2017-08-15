@@ -12,7 +12,7 @@
       <div class="container-fluid">
         <ul class="nav navbar-nav">
           <p class="navbar-text">
-            Регион:
+          Регион:
           </p>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" id="location-popover" href="#">
@@ -62,33 +62,33 @@
     {% block javascript %}
     {% endblock %}
     <script>
-        var showLocationPopover = function() {
-            var popoverTemplate = $("#location-popover-template-wrapper").html();
-            $("#location-popover").popover({
-                html: true,
-                placement: "bottom",
-                trigger: "manual",
-                container: "body",
-                template: popoverTemplate,
-                content: function() {
-                    return $("#location-prompt-wrapper").html();
-                }
-            }).popover("show");
-        };
-        $(document).ready(function() {
-            if (localStorage.getItem("isLocationPrompted") != "true") {
-                showLocationPopover();
-                localStorage.setItem("isLocationPrompted", "true");
-            }
-            $(".location-dropdown-trigger").click(function(e) {
-                e.stopPropagation(); // https://stackoverflow.com/a/35760042/3694363
-                $("#location-popover").dropdown("toggle");
-                $("#location-popover").popover("hide");
-            });
+      var showLocationPopover = function() {
+        var popoverTemplate = $("#location-popover-template-wrapper").html();
+        $("#location-popover").popover({
+          html: true,
+          placement: "bottom",
+          trigger: "manual",
+          container: "body",
+          template: popoverTemplate,
+          content: function() {
+            return $("#location-prompt-wrapper").html();
+          }
+        }).popover("show");
+      };
+      $(document).ready(function() {
+        if (localStorage.getItem("isLocationPrompted") != "true") {
+          showLocationPopover();
+          localStorage.setItem("isLocationPrompted", "true");
+        }
+        $(".location-dropdown-trigger").click(function(e) {
+          e.stopPropagation(); // https://stackoverflow.com/a/35760042/3694363
+          $("#location-popover").dropdown("toggle");
+          $("#location-popover").popover("hide");
         });
-        $(document).on("click", function (e) {
-            $("#location-popover").popover("hide");
-        });
+      });
+      $(document).on("click", function (e) {
+        $("#location-popover").popover("hide");
+      });
     </script>
   </body>
 </html>
