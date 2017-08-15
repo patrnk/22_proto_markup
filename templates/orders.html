@@ -25,6 +25,18 @@
     {% for order_index in range(8) %}
       {% include '_order.html' %}
     {% endfor %}
+    <div class="row">
+      <div class="col-sm-5 col-md-4 col-sm-offset-4 col-md-offset-5">
+        <ul class="pagination">
+          <li><a href="#"><span class="glyphicon glyphicon-chevron-left" style="height: 20px"></span></a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">...10</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-chevron-right" style="height: 20px"></span></a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}
