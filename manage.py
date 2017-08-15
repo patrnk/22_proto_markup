@@ -27,6 +27,7 @@ def render_templates():
         loader=jinja2.FileSystemLoader(TEMPLATES)
     )
     render_template(environment, 'index.html')
+    render_template(environment, 'orders.html')
 
 
 def parse_args(argv):
