@@ -1,4 +1,4 @@
-{% extends '__base.html' %}
+{% extends 'base.html' %}
 
 
 {% block title %}
@@ -26,9 +26,9 @@
         <h1 class="orders-title">Заявки</h1>
       </div>
     </div>
-    {% include '_order-filters.html' %}
+    {% include 'includables/order-filters.html' %}
     {% for order_index in range(8) %}
-      {% include '_order.html' %}
+      {% include 'includables/order.html' %}
     {% endfor %}
     <div class="row text-center">
       <button class="btn btn-primary btn-lg more-orders-button">Показать еще</button>

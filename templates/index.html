@@ -1,4 +1,4 @@
-{% extends '__base.html' %}
+{% extends 'base.html' %}
 
 
 {% block title %}
@@ -30,7 +30,7 @@
 <section class="order-form">
   <div class="container">
     <div class="row">
-      {% include '_order-form.html' %}
+      {% include 'includables/order-form.html' %}
     </div>
   </div>
 </section>
@@ -41,11 +41,11 @@
         <h1 class="new-orders-caption">Свежие заявки</h1>
       </div>
     </div>
-    {% include '_order-filters.html' %}
-    {% include '_order.html' %}
-    {% include '_order.html' %}
-    {% include '_order.html' %}
-    {% include '_order.html' %}
+    {% include 'includables/order-filters.html' %}
+    {% include 'includables/order.html' %}
+    {% include 'includables/order.html' %}
+    {% include 'includables/order.html' %}
+    {% include 'includables/order.html' %}
     <div class="row text-center">
       <a class="btn btn-primary btn-lg all-orders-button" href="orders.html">Посмотреть все заявки</a>
     </div>
@@ -58,13 +58,13 @@
         <div id="review-carousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="item active">
-              {% include '_review.html' %}
+              {% include 'includables/review.html' %}
             </div>
             <div class="item">
-              {% include '_review.html' %}
+              {% include 'includables/review.html' %}
             </div>
             <div class="item">
-              {% include '_review.html' %}
+              {% include 'includables/review.html' %}
             </div>
           </div>
           <a class="left carousel-control" href="#review-carousel" data-slide="prev">
