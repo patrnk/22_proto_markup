@@ -38,20 +38,3 @@
 .carousel-control.left, .carousel-control.right {
     background-image: none !important;
 }
-
-#review-carousel .carousel-control {
-    width: 4%;
-}
-
-#review-carousel .carousel-control .glyphicon-chevron-right {
-    right: 80px;
-}
-
-#review-carousel .carousel-control .glyphicon-chevron-left {
-    left: 80px;
-}
-
-.leave-review-button {
-    position: relative;
-    top: 65px;
-}

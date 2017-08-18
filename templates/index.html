@@ -51,29 +51,35 @@
 <section class="reviews">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
         <div id="review-carousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="item active">
-              {% include 'includables/review.html' %}
+              <div class="col-xs-10 col-xs-offset-1">
+                {% include 'includables/review.html' %}
+              </div>
             </div>
             <div class="item">
-              {% include 'includables/review.html' %}
+              <div class="col-xs-10 col-xs-offset-1">
+                {% include 'includables/review.html' %}
+              </div>
             </div>
             <div class="item">
-              {% include 'includables/review.html' %}
+              <div class="col-xs-10 col-xs-offset-1">
+                {% include 'includables/review.html' %}
+              </div>
             </div>
           </div>
-          <a class="left carousel-control" href="#review-carousel" data-slide="prev">
+          <a class="left carousel-control pull-left" href="#review-carousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
           </a>
-          <a class="right carousel-control" href="#review-carousel" data-slide="next">
+          <a class="right carousel-control pull-right" href="#review-carousel" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
       </div>
-      <div class="col-md-2">
-        <button class="btn btn-info leave-review-button">Отправить отзыв</button>
+      <div class="col-sm-1">
+        <button class="btn btn-info">Отправить отзыв</button>
       </div>
     </div>
   </div>
