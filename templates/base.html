@@ -85,7 +85,9 @@
           e.stopPropagation(); // https://stackoverflow.com/a/35760042/3694363
           $("#location-popover").dropdown("toggle");
           $("#location-popover").popover("hide");
-          $("#navbar").collapse();
+          if ($(window).width() < 768) {
+            $("#navbar").collapse();
+          }
         });
       });
       $(document).on("click", function (e) {
