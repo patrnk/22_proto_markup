@@ -1,31 +1,29 @@
 <div class="row">
-  <div class="col-sm-3 col-md-3 col-sm-offset-2 col-md-offset-2">
-    <span>раздел:</span>
-    <div class="dropdown" style="display: inline-block">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        Все
-        <span class="caret"></span>
-      </a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Не все</a></li>
-        <li><a href="#">Совсем чуть-чуть</a></li>
-        <li><a href="#">Еще немного</a></li>
-      </ul>
+  <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <div class="pull-left">
+      <span>раздел:</span>
+      <div class="dropdown" style="display: inline-block">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Все
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Не все</a></li>
+          <li><a href="#">Совсем чуть-чуть</a></li>
+          <li><a href="#">Еще немного</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="col-sm-5 col-md-5 text-right">
-    <span>регион:</span>
-    <div class="dropdown" style="display: inline-block">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        Новосибирск и область
-        <span class="caret"></span>
-      </a>
-      {% include 'includables/cities-dropdown-menu.html' %}
+    <div class="pull-right">
+        <span>регион:</span>
+        <div class="dropdown" style="display: inline-block">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Новосибирск и область
+            <span class="caret"></span>
+          </a>
+          {% include 'includables/cities-dropdown-menu.html' %}
+        </div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2 text-center">
     <hr>
   </div>
 </div>
