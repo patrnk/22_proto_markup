@@ -1,0 +1,17 @@
+.order-form-caption {
+    font-size: 42px;
+}
+
+.order-material-caption {
+    font-size: 24px;
+}
+
+.order-city-dropdown {
+    padding-top: 10px;
+}
+
+.order-form-button {
+    margin-top: 20px;
+    height: 50px !important;
+    border-radius: 25px;
+}
