@@ -8,6 +8,7 @@
 
 {% block stylesheets %}
 <link href="assets/css/index.css" rel="stylesheet">
+<link href="assets/css/includables/order-form.css" rel="stylesheet">
 {% endblock %}
 
 
@@ -28,11 +29,7 @@
   </div>
 </section>
 <section class="order-form">
-  <div class="container">
-    <div class="row">
-      {% include 'includables/order-form.html' %}
-    </div>
-  </div>
+  {% include 'includables/order-form.html' %}
 </section>
 <section class="new-orders">
   <div class="container">
