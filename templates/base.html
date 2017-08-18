@@ -11,22 +11,31 @@
   <body>
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <p class="navbar-text">
-          Регион:
-          </p>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" id="location-popover" href="#">
-              Новосибирск и область
-              <span class="caret"></span>
-            </a>
-            {% include 'includables/cities-dropdown-menu.html' %}
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Леонид Федорович</a></li>
-          <li><a href="#">выход</a></li>
-        </ul>
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="navbar-text">
+              Регион:
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" id="location-popover" href="#">
+                Новосибирск и область
+                <span class="caret"></span>
+              </a>
+              {% include 'includables/cities-dropdown-menu.html' %}
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Леонид Федорович</a></li>
+            <li><a href="#">выход</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <div id="location-popover-template-wrapper", style="display: none">
@@ -83,6 +92,7 @@
           e.stopPropagation(); // https://stackoverflow.com/a/35760042/3694363
           $("#location-popover").dropdown("toggle");
           $("#location-popover").popover("hide");
+          $("#navbar").collapse();
         });
       });
       $(document).on("click", function (e) {
