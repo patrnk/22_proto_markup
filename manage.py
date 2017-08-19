@@ -16,9 +16,9 @@ def collect_assets():
     file_utils.force_copy_folder(ASSETS, os.path.join(ROOT, ASSETS))
 
 
-def render_template(environment, name):
-    rendered_template = environment.get_template(name).render()
-    destination_path = os.path.join(ROOT, name)
+def render_template(environment, template_name):
+    rendered_template = environment.get_template(template_name).render()
+    destination_path = os.path.join(ROOT, template_name)
     file_utils.dump_html_to_file(rendered_template, destination_path)
 
 
