@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %} - kypimsami.ru</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/base.css" rel="stylesheet">
-    <link href="assets/css/includables/supplier-form.css" rel="stylesheet">
+    <style>
+      .suppliers {
+        margin-top: 60px;
+        padding-bottom: 20px;
+        background-color: #d9d9d9;
+      }
+
+      .location-popover-template {
+        max-width: 100%;
+        width: 340px;
+        height: 110px;
+      }
+    </style>
+    <link href="assets/css/supplier-form.css" rel="stylesheet">
     {% block stylesheets %}
     {% endblock %}
   </head>
